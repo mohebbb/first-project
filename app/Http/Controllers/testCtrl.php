@@ -11,8 +11,8 @@ class testCtrl extends Controller
         return view('courses');
     }
 
-    public function showCourse(string $id)
+    public function showCourse()
     {
-        return view('course', ['id', $id]);
+        return view('course');
     }
 }
