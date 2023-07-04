@@ -15,8 +15,9 @@ class testCtrl extends Controller
         return view('courses', ['courses' => $courses] );
     }
 
-    public function showCourse()
+    public function showCourse(string $id)
     {
-        return view('course');
+        $course = DB::select("select * from courses where id = '$id'");
+        return view('course', ['course' => $course, 'id'=> $id]);
     }
 }
