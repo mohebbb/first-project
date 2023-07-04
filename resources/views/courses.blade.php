@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>درس‌ها</title>
+    <style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        /* margin: 10px, 20px; */
+        padding: 10px;
+    }
+    </style>
 </head>
-<body dir="rtl" style= "display: flex; justify-content: center; align-items: center; height: 100vh;">
-    <h2>به صفحه درس‌ها خوش آمدید...</h2>;
+<body dir="rtl" style= "display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100vh;">
+    <h2>به صفحه درس‌ها خوش آمدید...</h2>
+    <div>
+        <table>
+            <tr>
+                <th>نام دوره</th>
+                <th>توضیحات</th>
+                <th>مدرس</th>
+            </tr>
+            @foreach($courses as $course)
+            <tr>
+                <th>{{$course->name}}</th>
+                <th>{{$course->description}}</th>
+                <th>{{$course->teacher}}</th>
+            </tr>
+            @endforeach
+        </table>
+    </div>
+
+    
 </body>
 </html>
