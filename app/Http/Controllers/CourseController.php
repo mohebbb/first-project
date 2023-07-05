@@ -6,18 +6,19 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
+use App\Models\courses;
 
-class testCtrl extends Controller
+class CourseController extends Controller
 {
     public function courses(): view
     {
-        $courses = DB::select('select * from courses');
+        $courses = courses::all();
         return view('courses', ['courses' => $courses] );
     }
 
     public function showCourse(string $id)
     {
-        $course = DB::select("select * from courses where id = '$id'");
+        $course = courses::where('id', $id)->get();
         return view('course', ['course' => $course, 'id'=> $id]);
     }
 }

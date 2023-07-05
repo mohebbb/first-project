@@ -16,23 +16,20 @@
 
 <body dir="rtl" style= "display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100vh;">
     <h2>درس شماره {{$id}}</h2>
-
     <div>
         <table>
-            @foreach($course as $cours)
             <tr>
                 <th>نام دوره</th>
-                <th>{{$cours->name}}</th>
+               <th>{{$course[0]->name}}</th>
             </tr>
             <tr>
                 <th>توضیحات</th>
-                <th>{{$cours->description}}</th>
+                <th>{{$course[0]->description}}</th>
             </tr>
             <tr>
                 <th>مدرس</th>
-                <th>{{$cours->teacher}}</th>
+                <th>{{$course[0]->teacher}}</th>
             </tr>
-            @endforeach
         </table>
     </div>
 </body>

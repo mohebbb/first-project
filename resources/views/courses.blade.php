@@ -16,25 +16,8 @@
 <body dir="rtl" style= "display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100vh;">
     <h2>به صفحه درس‌ها خوش آمدید...</h2>
     <div>
-        <!-- ============== نمایش جدول از کنترلر ================= -->
-        <!-- <table>
-            <tr>
-                <th>نام دوره</th>
-                <th>توضیحات</th>
-                <th>مدرس</th>
-            </tr>
 
-            @foreach($courses as $course)
-            <tr>
-                <th>{{$course->name}}</th>
-                <th>{{$course->description}}</th>
-                <th>{{$course->teacher}}</th>
-            </tr>
-            @endforeach
-        </table> -->
-        <!-- ====================================================== -->
-
-        <!-- ================== نمایش جدول از مدل ================= -->
+        <!-- ================== show table by model ================= -->
         <table>
             <tr>
                 <th>نام دوره</th>
@@ -45,9 +28,9 @@
             @inject('courses', 'App\Models\courses')
             @foreach($courses::all() as $course)
             <tr>
-                <th><a href="courses/{{$course->id}}">{{$course->name}}</a></th>
-                <th><a href="courses/{{$course->id}}">{{$course->description}}</a></th>
-                <th><a href="courses/{{$course->id}}">{{$course->teacher}}</a></th>
+                <th><a href="{{$course->id}}">{{$course->name}}</a></th>
+                <th><a href="{{$course->id}}">{{$course->description}}</a></th>
+                <th><a href="{{$course->id}}">{{$course->teacher}}</a></th>
             </tr>
             @endforeach
         </table>

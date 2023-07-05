@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\testCtrl;
+use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/courses', [testCtrl::class, 'courses'] );
+route::get('/courses', [CourseController::class, 'courses'] );
 
-route::get('/courses/{id}', [testCtrl::class, 'showCourse']);
+route::get('/courses/{id}', [CourseController::class, 'showCourse']);
