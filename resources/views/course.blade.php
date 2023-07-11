@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>درس شماره {{$id}}</title>
+    <title>درس شماره {{$course->id}}</title>
     <style>
         table, tr, th{
             border: 1px solid black;
@@ -15,20 +15,23 @@
 </head>
 
 <body dir="rtl" style= "display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100vh;">
-    <h2>درس شماره {{$id}}</h2>
+ 
+    <br>
+ 
+    <h2>درس شماره {{$course->id}}</h2>
     <div>
         <table>
             <tr>
                 <th>نام دوره</th>
-               <th>{{$course[0]->name}}</th>
+               <th>{{$course->name}}</th>
             </tr>
             <tr>
                 <th>توضیحات</th>
-                <th>{{$course[0]->description}}</th>
+                <th>{{$course->description}}</th>
             </tr>
             <tr>
                 <th>مدرس</th>
-                <th>{{$course[0]->teacher}}</th>
+                <th>{{$course->teacher}}</th>
             </tr>
         </table>
     </div>

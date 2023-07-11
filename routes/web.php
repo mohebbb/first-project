@@ -17,7 +17,7 @@ use App\Http\Controllers\CourseController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-route::get('/courses', [CourseController::class, 'courses'] );
-
-route::get('/courses/{id}', [CourseController::class, 'showCourse']);
+route::controller(CourseController::class)->group(function(){
+        route::get('/course', 'courses');
+        route::get('/course/{id}', 'showCourse')->name('coursePage');
+});
