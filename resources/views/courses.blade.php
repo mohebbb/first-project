@@ -17,24 +17,20 @@
     <h2>به صفحه درس‌ها خوش آمدید...</h2>
     <div>
 
-        <!-- ================== show table by model ================= -->
         <table>
             <tr>
                 <th>نام دوره</th>
                 <th>توضیحات</th>
                 <th>مدرس</th>
             </tr>
-
-            @inject('courses', 'App\Models\courses')
-            @foreach($courses::all() as $course)
+            @foreach($courses as $course)
             <tr>
-                <th><a href="{{$course->id}}">{{$course->name}}</a></th>
-                <th><a href="{{$course->id}}">{{$course->description}}</a></th>
-                <th><a href="{{$course->id}}">{{$course->teacher}}</a></th>
+                <th><a href="{{route('coursePage', ['id' => $course->id])}}">{{$course->name}}</a></th>
+                <th><a href="{{route('coursePage', ['id' => $course->id])}}">{{$course->description}}</a></th>
+                <th><a href="{{route('coursePage', ['id' => $course->id])}}">{{$course->teacher}}</a></th>
             </tr>
             @endforeach
         </table>
-        <!-- ========================================================== -->
     </div>    
 </body>
 </html>

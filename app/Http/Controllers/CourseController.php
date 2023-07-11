@@ -10,15 +10,15 @@ use App\Models\courses;
 
 class CourseController extends Controller
 {
-    public function courses(): view
+    public function courses()
     {
         $courses = courses::all();
-        return view('courses', ['courses' => $courses] );
+        return view('courses', ['courses' => $courses]);
     }
 
     public function showCourse(string $id)
     {
-        $course = courses::where('id', $id)->get();
-        return view('course', ['course' => $course, 'id'=> $id]);
+        $course = courses::find($id);
+        return view('course', ['course' => $course]);
     }
 }
