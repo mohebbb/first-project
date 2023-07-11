@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 route::controller(CourseController::class)->group(function(){
-        route::get('/course', 'courses');
-        route::get('/course/{id}', 'showCourse')->name('coursePage');
+    route::get('/course', 'courses');
+    route::get('/course/{id}', 'showCourse')->name('coursePage');
 });
