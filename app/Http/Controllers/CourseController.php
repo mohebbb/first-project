@@ -10,10 +10,16 @@ use App\Models\courses;
 
 class CourseController extends Controller
 {
-    public function courses()
+    public function home() 
+    {
+        $notCompleteCourses = courses::where('is_complete', 0)->get();
+        return view('home', ['notCompleteCourses' => $notCompleteCourses]);
+    }
+
+    public function yourCourses()
     {
         $courses = courses::all();
-        return view('courses', ['courses' => $courses]);
+        return view('yourCourses', ['courses' => $courses]);
     }
 
     public function showCourse(string $id)
@@ -21,4 +27,6 @@ class CourseController extends Controller
         $course = courses::find($id);
         return view('course', ['course' => $course]);
     }
+
+
 }

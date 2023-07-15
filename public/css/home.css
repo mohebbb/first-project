@@ -1,0 +1,162 @@
+body , html{
+    height: 100%;
+}
+
+body {
+    font: 1rem vazirmatn;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #0e2338;
+    background-image: linear-gradient( rgb(42,61,80) 30%,rgb(14, 35, 56),rgb(14, 35, 56) );
+    background-repeat: no-repeat;
+}
+
+/* ------------main------------ */
+main {
+    margin-bottom: auto;
+}
+
+.headImg {
+    max-width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 1.25rem;
+}
+
+
+
+/* -------------contents-------------- */
+
+/* .search-course {
+    font-size: .9rem;
+    width: 13px;
+    border: 2px solid rgb(255, 25, 25);
+    background: none;
+    text-align: center;
+    outline: none;
+    color: rgb(0, 0, 0);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.search-course:focus {
+    width: 170px;
+} */
+
+.recentCourse {
+    position: relative;
+    width: 85%;
+    margin: 35px auto 0px;
+}
+
+.titr {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.course {
+    position: relative;
+    background-color: rgb(11, 44, 78);
+    /* background-color: #2d4739; */
+    /* background-color: #09814a; */
+    /* width: 20rem;  برای دیوایس های بزرگتر تو مدیا اسکرسن، ماکس وید میدم*/
+    padding: 16px 13px 0px;
+    box-sizing: border-box;
+    margin: 30px 10px 0px;
+    border-radius: 1.25rem;
+}
+
+.content-img {
+    width: 100%;
+    border-radius: 1.25rem;
+}
+
+.caption-titr {
+
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    margin-top: 10px;
+    
+}
+
+.description {
+    font-size: .875rem;
+    color: rgba(209,218,231);
+    margin: 10px 0px;
+    line-height: 1.5rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    border-top: solid rgba(255, 255, 255 , .1) 1px ;    
+}
+
+.unbutton {
+    text-decoration:none;
+    color: #609cff;
+    color: #f4d35e;
+    margin: 5px 0px;
+
+}
+
+
+
+/* گزارش های اخیر شما */
+
+.recentReport {
+    width: 85%;
+    margin: 50px auto 0px;
+}
+
+#table {
+    overflow-x: scroll;
+    border-radius: 15px;
+    margin: 30px 10px 0px;}
+
+table {
+    width: 600px;
+    font-size: .9rem;
+    background-color: rgb(11, 44, 78);
+    color:  rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+}
+
+
+td , th{
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.5);
+    border-left: 1px solid  rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 5px 10px;
+}
+
+th {
+    background-color:  rgba(255, 255, 255, 0.25);
+}
+
+
+
+/* @media screen and (max-width : 768px) {
+    .nav {
+        display: flex;
+        flex-direction:column-reverse;
+        align-items:stretch;
+    }
+    .right {
+        opacity: 60;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin: 9px 0px 0px;
+           
+        
+    }
+    
+    .menu {
+        opacity: 100;
+    }
+} */

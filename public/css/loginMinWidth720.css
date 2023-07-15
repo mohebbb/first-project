@@ -1,0 +1,129 @@
+.main {
+    height: 100%;
+    font: 1rem vazirmatn;
+    color: aliceblue;
+    background: url(../img/login-bg.jpg) center center no-repeat;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+input[type="text"] ,
+input[type="password"] , 
+input[type = "submit"] {
+    border: 1.8px solid aliceblue;
+    background: none;
+    text-align: center;
+    margin: 7px;
+    outline: none;
+    color: aliceblue;
+    transition: .25s;
+    border-radius: 30px;
+}
+
+input[type="text"] ,
+input[type="password"] {
+    height: 20px;
+    padding: 8px 10px;
+    width: 70%;
+}
+
+input[type="submit"] {
+    height: 35px;
+    width: 25%;
+    font: .9rem vazirmatn;
+    font-weight: 600;
+    color: #3bd3f9;
+}
+
+input[type = "submit"]:hover {
+    background-color: #3bd3f9;
+    color: #061b2c;
+}
+
+
+.form-contorol:focus {
+    width: 80%;
+    border-color: #3bd3f9;
+}
+
+/* form control placeholder start */
+
+.form-contorol::placeholder {
+    font: 1rem vazirmatn;
+    color: #fff;
+    opacity: .8;
+}
+
+.form-contorol:-moz-placeholder {
+    font: 1rem vazirmatn;
+    color: #fff;
+    opacity: .8;
+
+}
+
+.form-contorol::-moz-placeholder {
+    font: 1rem vazirmatn;
+    color: #fff;
+    opacity: .8;
+}
+
+.form-contorol::-webkit-input-placeholder {
+    font: 1rem vazirmatn;
+    color: #fff;
+    opacity: .8;
+}
+
+.form-contorol::-ms-input-placeholder {
+    font: 1rem vazirmatn;
+    color: #fff;
+    opacity: .8;
+}
+
+/* form control placeholder end */
+
+
+form h2{
+    font-size: 1.6rem;
+    margin: 0px 0px 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #fff ;
+}
+
+.continer {
+    min-width: 250px;
+    width: 70vw;
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: 7px 7px 15px 2px rgba(4, 1, 24,.5);
+    margin: 30px;
+}
+
+.img {
+    width: 40vw;
+    min-width: 250px;
+    height: 40vw;
+    background: url(../img/hadis.jpg) center center no-repeat;
+    background-size: cover;
+    border-top-left-radius: 20px ;
+    border-bottom-left-radius: 20px ;
+    border-top-right-radius: 0px ;
+}
+
+form {
+    background-color: #061b2c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vw;
+    min-width: 250px;
+    height: 40vw;
+    padding: 25px 10px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 0px ;
+    border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px ; 
+}

@@ -4,36 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>درس شماره {{$course->id}}</title>
-    <style>
-        table, tr, th{
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 10px;
-        }
-    </style>
+    <title>درس‌های شما</title>
+    <link rel="icon" href="{{url('/img/313 icon.ico')}}">
+    <link rel="stylesheet" href="{{url('/css/reset200802.css')}}">
+    <link rel="stylesheet" href="{{url('/Fonts/vazirmatn/Vazirmatn-font-face.css')}}">
+    <link rel="stylesheet" href="{{url('/css/course.css')}}">
 </head>
+<body dir="rtl" class="continer">    
 
-<body dir="rtl" style= "display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100vh;">
- 
-    <br>
- 
-    <h2>درس شماره {{$course->id}}</h2>
-    <div>
-        <table>
-            <tr>
-                <th>نام دوره</th>
-               <th>{{$course->name}}</th>
-            </tr>
-            <tr>
-                <th>توضیحات</th>
-                <th>{{$course->description}}</th>
-            </tr>
-            <tr>
-                <th>مدرس</th>
-                <th>{{$course->teacher}}</th>
-            </tr>
-        </table>
-    </div>
+    <x-header/>        
+        
+    <main>
+        <div class="main">
+            <div class="card">
+                <div class="content">
+                    <div class="pic-and-title">
+                        <img src="{{$course->img}}" alt="درس 1" class="img">
+                        <h2 class="title">{{$course->name}}</h2>   
+                    </div>    
+                    <div class="description block">
+                        <h2 class="description-title">توضیحات:</h2>
+                        <div class="description-text">
+                            <p>{{$course->description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    @include('include.footer')
+    
 </body>
 </html>

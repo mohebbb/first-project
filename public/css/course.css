@@ -1,0 +1,274 @@
+body , html{
+    height: 100%;
+}
+
+body {
+    font: 1rem vazirmatn;
+    color: #fff;
+}
+
+.continer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #0e2338;
+    background-image: linear-gradient( rgb(42,61,80) 30%,rgb(13, 34, 55),rgb(13, 34, 55) );
+    background-repeat: no-repeat;
+}
+
+.title-frame-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 0;
+    position: relative;
+}
+
+.title-frame{    
+    width: 90%;
+}
+
+.title{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-shadow: 0px 0px 30px rgba(0,0,0,1);
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.card{
+    background-color: rgb(26, 52, 77);
+    width: 90%;
+    border-radius: 25px;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titr {
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img{
+    width: 100%;
+    border-radius: 25px;
+}
+
+.pic-and-title{
+    position: relative;
+}
+
+.block{
+    margin: 20px;
+}
+
+.description-text{
+    text-align: justify;
+    margin: 10px 10px 0 10px;
+    padding-right: 10px;
+    border-right: 2px solid #fff;
+
+}
+
+.video {
+    border-radius: 20px;
+    overflow:hidden;
+}
+
+.block-title{
+    margin: 0 0 20px 0;
+}
+
+.download-icon {
+    margin-left: 10px;
+}
+
+.file-download{
+    display: flex;
+    background-color: rgb(6, 26, 51);
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+.file-download:hover {
+    border: 0;
+    color: #6ca5e7;
+    outline: solid 2px #19579d;
+}
+
+.sessions{
+    width: 100%;
+}
+.session {
+    height: 40px;
+    background-color: #0e2338;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 15px 0;
+}
+
+.session-number {
+    margin: 0 0 0 10px;
+    padding: 0 0 0 10px;
+    border-left: 1.5px solid rgba(255, 255, 255, .5);
+    font-weight: 500;
+}
+
+.session-name {
+    font-weight: 400;
+}
+
+.arrow {
+    margin: 0 auto 0 0;
+}
+
+.session-child-hight {
+    height: 80px;
+}
+
+.part-number {
+    color:  rgba(255, 255, 255, .5);
+    font-weight: 900;
+    height: 100%;
+    padding: 0 5px 0 20px;
+    margin: 0 0 0 20px;
+    border-left: 1.3px solid #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.underline {
+    height: 5px;
+    width: 25px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.session ul {
+    display: none;
+}
+
+/* 
+main {
+    margin-bottom: auto;
+}
+
+.img-head {
+    max-width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 1.25rem;
+}
+
+.course-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search-course {
+    font-size: .9rem;
+    width: 13px;
+    border: 2px solid rgb(255, 25, 25);
+    background: none;
+    text-align: center;
+    outline: none;
+    color: rgb(0, 0, 0);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.search-course:focus {
+    width: 170px;
+}
+
+.course {
+    position: relative;
+    margin: 35px 30px;
+    padding: 30px 0px;
+}
+
+.titr {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+
+#contents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;}
+
+.content {
+    position: relative;
+    background-color: rgb(11, 44, 78);
+    padding: 16px 13px 0px;
+    box-sizing: border-box;
+    margin: 30px 10px 0px 10px;
+    border-radius: 1.25rem;
+}
+
+.content-img {
+    width: 100%;
+    border-radius: 1.25rem;
+}
+
+.caption-titr {
+
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    margin-top: 10px;
+    
+}
+
+.description {
+    font-size: .875rem;
+    color: rgba(209,218,231);
+    margin: 10px 0px;
+    line-height: 1.5rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    border-top: solid rgba(255, 255, 255 , .1) 1px ;    
+}
+.unbutton {
+    text-decoration:none;
+    color: rgba(96, 156, 255, 1);
+    color: #f4d35e;
+    margin: 5px 0px;
+
+} */
