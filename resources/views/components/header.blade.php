@@ -62,7 +62,7 @@ function fa_num($number)
                                 </li>
                                 @foreach($courses as $course)
                                 <li class="child-part">
-                                    <a href="{{route('showCourse', ['id' => $course->id])}}">{{$course->name}}</a>
+                                    <a href="{{route('showCourse', ['course' => $course->id])}}">{{$course->name}}</a>
                                 </li>
                                 @endforeach
                             </ul>                             

@@ -32,7 +32,7 @@
                     <p class="description">{{$course->description}}</p>
                 </div>
                 <div class="btn">
-                    <a href="{{route('showCourse', ['id' => $course->id])}}" class="unbutton">مشاهده</a>
+                    <a href="{{route('showCourse', ['course' => $course->id])}}" class="unbutton">مشاهده</a>
                 </div>
             </div>
             @endforeach

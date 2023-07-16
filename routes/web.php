@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
+use App\Models\courses;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,11 @@ use App\Http\Controllers\CourseController;
 */
 
 route::controller(CourseController::class)->group(function(){
-    Route::get('/', 'home')->name('showHome');
-    route::get('/course', 'yourCourses')->name('showYourCourses');
-    route::get('/course/{id}', 'showCourse')->name('showCourse');
+    Route::get('/', 'index')->name('showHome');
+    route::get('/course', 'show')->name('showYourCourses');
 });
+
+route::get('/course/{course}', function (courses $course)
+{
+    return view('course', ['course' => $course]);
+})->name('showCourse');
