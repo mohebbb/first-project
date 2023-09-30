@@ -20,6 +20,10 @@ route::controller(CourseController::class)->group(function(){
     route::get('/course', 'show')->name('showYourCourses');
 });
 
+route::get('/test', function()
+{
+    return view('testTailwind');
+});
 route::get('/course/{course}', function (courses $course)
 {
     return view('course', ['course' => $course]);
